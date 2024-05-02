@@ -1,9 +1,19 @@
 public enum DayOfWeek {
-    MONDAY,
-    TUESDAY,
-    WEDNESDAY,
-    THURSDAY,
-    FRIDAY,
-    SATURDAY,
-    SUNDAY
+    MONDAY("Monday"),
+    TUESDAY("Tuesday"),
+    WEDNESDAY("Wednesday"),
+    THURSDAY("Thursday"),
+    FRIDAY("Friday"),
+    SATURDAY("Weekend"),
+    SUNDAY("Weekend");
+
+    private final String weekend;
+
+    DayOfWeek(String weekend) {
+        this.weekend = weekend;
+    }
+
+    String checkWeekend() {
+       return weekend;
+    }
 }
