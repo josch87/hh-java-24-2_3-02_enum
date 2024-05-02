@@ -10,11 +10,13 @@ public class Main {
         Person benjamin = new Person(2, Gender.MALE,"Benjamin",DayOfWeek.SATURDAY);
         Person horst = new Person(3, Gender.FEMALE, "Horst",DayOfWeek.FRIDAY);
         Person peter = new Person(4, Gender.DIVERSE,"Peter",DayOfWeek.SUNDAY);
+        Person susanne = new Person(5, Gender.FEMALE,"Susanne",DayOfWeek.SUNDAY);
 
         PersonRepository aljoschasContacts = new PersonRepository();
         aljoschasContacts.addPerson(aljoscha);
         aljoschasContacts.addPerson(horst);
         aljoschasContacts.addPerson(peter);
+        aljoschasContacts.addPerson(susanne);
 
         System.out.println(aljoschasContacts);
         System.out.println(aljoschasContacts.getPersonById(1));
