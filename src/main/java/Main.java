@@ -6,10 +6,10 @@ public class Main {
         System.out.println(DayOfWeek.MONDAY.checkWeekend());
         System.out.println(DayOfWeek.SATURDAY.checkWeekend());
 
-        Person aljoscha = new Person(1, "Aljoscha", DayOfWeek.MONDAY);
-        Person benjamin = new Person(2,"Benjamin",DayOfWeek.SATURDAY);
-        Person horst = new Person(3,"Horst",DayOfWeek.FRIDAY);
-        Person peter = new Person(4,"Peter",DayOfWeek.SUNDAY);
+        Person aljoscha = new Person(1, Gender.MALE, "Aljoscha", DayOfWeek.MONDAY);
+        Person benjamin = new Person(2, Gender.MALE,"Benjamin",DayOfWeek.SATURDAY);
+        Person horst = new Person(3, Gender.FEMALE, "Horst",DayOfWeek.FRIDAY);
+        Person peter = new Person(4, Gender.DIVERSE,"Peter",DayOfWeek.SUNDAY);
 
         PersonRepository aljoschasContacts = new PersonRepository();
         aljoschasContacts.addPerson(aljoscha);
