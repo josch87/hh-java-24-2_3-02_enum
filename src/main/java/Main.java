@@ -41,5 +41,9 @@ public class Main {
             Person sus = s.get();
             System.out.println(sus.name() + "s gender is " + sus.gender());
         }
+
+        for (DayOfWeek day : DayOfWeek.values()) {
+            System.out.println(day + ": " + aljoschasContacts.getPersonsByFavoriteWeekday(day));
+        }
     }
 }

@@ -43,4 +43,15 @@ public class PersonRepository {
         }
         return count;
     }
+
+    public List<Person> getPersonsByFavoriteWeekday(DayOfWeek favoriteWeekday) {
+        List<Person> personsWithFavDay = new ArrayList<>();
+
+        for (Person person : persons) {
+            if (person.favoriteDay().equals(favoriteWeekday)) {
+                personsWithFavDay.add(person);
+            }
+        }
+        return personsWithFavDay;
+    }
 }
