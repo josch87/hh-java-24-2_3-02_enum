@@ -24,4 +24,14 @@ public class PersonRepository {
         }
         return Optional.empty();
     }
+
+    public int countGender(Gender gender) {
+        int count = 0;
+        for (Person person : persons) {
+            if (person.gender().equals(gender)) {
+                count ++;
+            }
+        }
+        return count;
+    }
 }

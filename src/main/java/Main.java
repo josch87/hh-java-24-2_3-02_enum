@@ -26,5 +26,13 @@ public class Main {
         } else {
             System.out.println("Person does not exist");
         }
+
+        System.out.println("Males: " + aljoschasContacts.countGender(Gender.MALE));
+        System.out.println("Females: " + aljoschasContacts.countGender(Gender.FEMALE));
+        System.out.println("Diverse: " + aljoschasContacts.countGender(Gender.DIVERSE));
+
+        for (Gender gender : Gender.values()) {
+            System.out.println(gender + ": " + aljoschasContacts.countGender(gender));
+        }
     }
 }
