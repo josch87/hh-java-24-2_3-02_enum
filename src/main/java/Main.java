@@ -32,5 +32,14 @@ public class Main {
         for (Gender gender : Gender.values()) {
             System.out.println(gender + ": " + aljoschasContacts.countGender(gender));
         }
+
+        String searchTerm = "susanne";
+        Optional<Person> s = aljoschasContacts.getPersonByName(searchTerm);
+        if (s.isEmpty()) {
+            System.out.println("Was not able to find a contact with the name \"" + searchTerm + "\"");
+        } else {
+            Person sus = s.get();
+            System.out.println(sus.name() + "s gender is " + sus.gender());
+        }
     }
 }

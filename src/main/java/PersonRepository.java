@@ -25,6 +25,15 @@ public class PersonRepository {
         return Optional.empty();
     }
 
+    public Optional<Person> getPersonByName(String name) {
+        for (Person person : persons) {
+            if (person.name().equalsIgnoreCase(name)) {
+                return Optional.of(person);
+            }
+        }
+        return Optional.empty();
+    }
+
     public int countGender(Gender gender) {
         int count = 0;
         for (Person person : persons) {
