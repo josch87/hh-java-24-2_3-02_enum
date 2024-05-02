@@ -1,2 +1,2 @@
-public record Person(int id, String name, DayOfWeek favoriteDay) {
+public record Person(int id, Gender gender, String name, DayOfWeek favoriteDay) {
 }
